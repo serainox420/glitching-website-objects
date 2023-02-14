@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<div class="lel">
+  <a href="#" target="_blank">Link</a>
+</div>
+<style>
+.lel {
+  position: absolute;
+  animation: swirlLel 10s infinite linear;
+  overflow: hidden;
+}
+
+.lel a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.lel a:before,
+.lel a:after {
+  content: attr(data-link);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.lel a:before {
+  color: red;
+  animation: glitchBefore 0.3s infinite;
+}
+
+.lel a:after {
+  color: blue;
+  animation: glitchAfter 0.3s infinite;
+}
+
+@keyframes swirlLel {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
+  }
+}
+
+@keyframes glitchBefore {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, -5px);
+  }
+  40% {
+    transform: translate(5px, 5px);
+  }
+  60% {
+    transform: translate(-5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchAfter {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(5px, 5px);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, -5px);
+  }
+  80% {
+    transform: translate(-5px, 5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+</style>
+<script>
+const websites = [
+  'https://www.google.com',
+  'https://www.yahoo.com',
+  'https://www.bing.com',
+  'https://www.wikipedia.org',
+  'https://www.github.com'
+];
+
+setInterval(() => {
+  let lel = document.querySelector('.lel');
+  let size = Math.floor(Math.random() * 100) + 5;
+  lel.style.width = `${size}px`;
+  lel.style.height = `${size}px`;
+  lel.querySelector('a').setAttribute('data-link', websites[Math.floor(Math.random() * websites.length)]);
+}, 500);
+
+</script>
+</body>
+</html>
