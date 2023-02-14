@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinitely Refreshing Website</title>
+  </head>
+  <body>
+    <div id="content">
+      <p id="dynamic-content"></p>
+    </div>
+    <style>
+    #content {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+#dynamic-content {
+  font-size: 8em;
+  font-weight: bold;
+}
+</style>
+<script>
+function refreshPage() {
+  // generate a random number between 1 and 100
+  var randomNumber = Math.floor(Math.random() * 10000000000) + 1;
+  
+  // update the dynamic content with the new number
+  var dynamicContent = document.getElementById("dynamic-content");
+  dynamicContent.innerHTML = " " + randomNumber;
+  
+  // refresh the page every 3 seconds
+  setTimeout(refreshPage, 69);
+}
+
+// call the refreshPage function to start the infinite refresh loop
+refreshPage();
+</script>
+  </body>
+</html>
