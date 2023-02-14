@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infinitely Refreshing Glitching Website Object with Random Resizing and Moving (Smooth)</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="glitch-text"> </div>
+  <script src="script.js"></script>
+  <style>
+  body {
+  background-color: black;
+}
+
+#glitch-text {
+  color: green;
+  font-size: 9em;
+  font-family: monospace;
+  position: absolute;
+  top: 420%;
+  left: 120%;
+  transition: all 2.5s ease-out;
+}
+
+  </style>
+  <script>
+  const GALACTIC_ALPHABET = ['\u2370', '\u2371', '\u2372', '\u2373', '\u2374', '\u2375', '\u2376', '\u2377', '\u2378', '\u2379'];
+
+function getRandomChar() {
+  return GALACTIC_ALPHABET[Math.floor(Math.random() * GALACTIC_ALPHABET.length)];
+}
+
+function getRandomString(length) {
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += getRandomChar();
+  }
+  return result;
+}
+
+function updateGlitchText() {
+  const glitchText = document.getElementById('glitch-text');
+  glitchText.innerText = getRandomString(50);
+  glitchText.style.fontSize = Math.floor(Math.random() * 10) + 'em';
+  glitchText.style.top = Math.floor(Math.random() * window.innerHeight) + 'px';
+  glitchText.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
+}
+
+setInterval(updateGlitchText, 420);
+
+  </script>
+</body>
+</html>
