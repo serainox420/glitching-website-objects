@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<div class="testx"></div>
+<style>
+.testx {
+  position: absolute;
+  animation: swirlTestx 19s infinite linear;
+}
+
+@keyframes swirlTestx {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: calc(100% - 500px);
+    left: calc(100% - 50px);
+  }
+}
+</style>
+<script>
+const websites = [
+  'https://theuselessweb.com/',
+];
+
+setInterval(() => {
+  let testx = document.querySelector('.testx');
+  let size = Math.floor(Math.random() * 1000) + 50;
+  testx.style.width = `${size}px`;
+  testx.style.height = `${size}px`;
+  testx.innerHTML = `<a href="${websites[Math.floor(Math.random() * websites.length)]}" target="_blank">LMAO</a>`;
+}, 500);
+</script>
+</body>
+</html>
