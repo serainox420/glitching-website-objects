@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<div class="shape"></div>
+<style>
+.shape {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 500%;
+  animation: moveShape 5s infinite;
+}
+
+@keyframes moveShape {
+  0% { top: 1; left: 9; }
+  50% { top: 200px; left: 400px; }
+  100% { top: 0; left: 0; }
+}
+</style>
+<script>
+setInterval(() => {
+  let shape = document.querySelector('.shape');
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let color = `rgb(${r}, ${g}, ${b})`;
+  shape.style.backgroundColor = color;
+  let size = Math.floor(Math.random() * 10000) + 5;
+  shape.style.width = `${size}px`;
+  shape.style.height = `${size}px`;
+}, 1000);
+</script>
+</body>
+</html>
