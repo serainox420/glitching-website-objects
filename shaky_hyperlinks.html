@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<div class="container">
+  <div class="links-container">
+    <a href="http://uselessweb.com" target="_blank">!¡!¡ᒷ∷ ʖ𝙹∴ꖎ ᓭ⍑𝙹リᒷ ╎リ ℸ ̣ ⍑ᒷ ᓭ⚍リ'ᓭ ∷ᔑ||ᓭ. L╎⊣⍑ℸ ̣ WATCH </a>
+    <a href="http://uselessweb.com" target="_blank">Li!¡!¡ᒷ∷ ʖ𝙹∴ꖎ ᓭ⍑𝙹リᒷ ╎リ ℸ ̣ ⍑ᒷ ᓭ⚍リ'ᓭ ∷ᔑ||ᓭ. L╎⊣⍑ℸ ̣ WATCH nk</a>
+    <a href="http://uselessweb.com" target="_blank">L!¡!¡ᒷ∷ ʖ𝙹∴ꖎ ᓭ⍑𝙹リᒷ ╎リ ℸ ̣ ⍑ᒷ ᓭ⚍リ'ᓭ ∷ᔑ||ᓭ. L╎⊣⍑ℸ ̣ WATCH ink</a>
+    <a href="http://uselessweb.com" target="_blank">Li!¡!¡ᒷ∷ ʖ𝙹∴ꖎ ᓭ⍑𝙹リᒷ ╎リ ℸ ̣ ⍑ᒷ ᓭ⚍リ'ᓭ ∷ᔑ||ᓭ. L╎⊣⍑ℸ ̣ WATCH nk</a>
+    <a href="http://uselessweb.com" target="_blank">Li!¡!¡ᒷ∷ ʖ𝙹∴ꖎ ᓭ⍑𝙹リᒷ ╎リ ℸ ̣ ⍑ᒷ ᓭ⚍リ'ᓭ ∷ᔑ||ᓭ. L╎⊣⍑ℸ ̣ WATCH nk</a>
+    ...
+    <!-- Repeat the above line 93 more times -->
+  </div>
+</div>
+<style>
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.links-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.links-container a {
+  position: absolute;
+  top: 06;
+  left: 0;
+  width: 500px;
+  height: 50px;
+  animation: glitchLinks 0.1s infinite;
+}
+
+.links-container a:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.links-container a:nth-child(2) {
+  top: 2%;
+  left: 20%;
+}
+
+.links-container a:nth-child(3) {
+  top: 30%;
+  left: 30%;
+}
+
+.links-container a:nth-child(4) {
+  top: 40%;
+  left: 4%;
+}
+
+.links-container a:nth-child(5) {
+  top: 5%;
+  left: 50%;
+}
+
+/* Repeat the above 5 lines 94 more times, changing the values of nth-child(), top, and left each time */
+
+@keyframes glitchLinks {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-55px, -5px);
+  }
+  40% {
+    transform: translate(50px, 5px);
+  }
+  60% {
+    transform: translate(-50px, 5px);
+  }
+  80% {
+    transform: translate(500px, -5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+</style>
+</body>
+</html>
